@@ -41,52 +41,56 @@
     </nav>
   </div>
 </header>
-<main class="inner-main">
-  <div class="container-form">
-    <form action="https://echo.htmlacademy.ru/" method="GET" class="form form__wrapper">
+<main class="main inner-main">
+  <div class="main__title-wrap container">
+    <h1 class="main__title">Подбор программы</h1>
+  </div>
+
+  <div class="form-page">
+    <div class="form-page__text-wrap container">
+      <p class="form-page__text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+    </div>
+
+    <form class="program-form" action="https://echo.htmlacademy.ru/" method="GET">
+      <div class="program-form__info container">
+        <ul class="program-form__info-list program-info">
+          <li class="program-info__i">
+            <label class="program-info__label control-label" for="program-info-name">Имя:*</label>
+            <input class="program-info__input control-input" type="text" id="program-info-name" name="name" value="БАРСИК" required>
+          </li>
+          <li class="program-info__i">
+            <label class="program-info__label control-label" for="program-info-weight">Вес (кг):*</label>
+            <input class="program-info__input control-input" type="text" id="program-info-weight" name="weight" value="7" required>
+          </li>
+          <li class="program-info__i">
+            <label class="program-info__label control-label" for="program-info-age">Возраст (лет):</label>
+            <input class="program-info__input control-input" type="text" id="program-info-age" name="age" value="7">
+          </li>
+        </ul>
+
+        <ul class="program-form__list program-choose">
+          <li class="program-choose__i control-radio">
+            <input class="visually-hidden" type="radio" id="program-choose-loss" name="program" value="loss" checked>
+            <label class="control-radio__label" for="program-choose-loss">
+              <span class="control-radio__box"></span>Похудение
+            </label>
+          </li>
+          <li class="program-choose__i">
+            <input class="visually-hidden" type="radio" id="program-choose-gain" name="program" value="gain">
+            <label class="control-radio__label" for="program-choose-gain">
+              <span class="control-radio__box"></span>Набор массы
+            </label>
+          </li>
+          <li class="program-choose__i">
+            <input class="visually-hidden" type="radio" id="program-choose-any" name="program" value="any">
+            <label class="control-radio__label" for="program-choose-any">
+              <span class="control-radio__box"></span>Не знаю (Нужен ваш совет)
+            </label>
+          </li>
+        </ul>
+      </div>
+
       <div class="container">
-        <div class="from-header__wrapper">
-          <h1 class="form__title">Подбор программы</h1>
-          <span class="form__text form__text-wrapper">Заполните анкету, и мы подберем <br> программу питания для вашего кота</span>
-        </div>
-        <div class="inner-main__container">
-          <fieldset class="form__data cat-data">
-            <div class="cat-data__wrapper">
-              <legend class="cat-data__title visually-hidden">Данные о коте</legend>
-              <div class="cat-data__container">
-                <label for="name" class="cat-data__input-label">Имя:*</label>
-                <input type="text" id="name" class="cat-data__input cat-data__input-wrapper" value="БАРСИК" name="cat-name" required>
-              </div>
-              <div class="cat-data__container">
-                <label for="weight" class="cat-data__input-label">Вес (кг):*</label>
-                <input type="text" id="weight" class="cat-data__input cat-data__input-wrapper" value="7" name="cat-weight" required>
-              </div>
-              <div class="cat-data__container">
-                <label for="age" class="cat-data__input-label">Возраст (лет):</label>
-                <input type="text" id="age" class="cat-data__input cat-data__input-wrapper" value="7" name="cat-age">
-              </div>
-            </div>
-          </fieldset>
-        </div>
-        <div class="inner-main__container">
-          <fieldset class="form__data cat-mission">
-            <div class="cat-mission__wrapper">
-              <legend class="cat-mission__title visually-hidden">Цель</legend>
-              <label class="cat-mission__control">
-                <input class="cat-mission__control-input" type="radio" name="cat-mission" value="weight-loss" checked>
-                <span class="cat-mission__control-label">похудение</span>
-              </label>
-              <label class="cat-mission__control">
-                <input class="cat-mission__control-input" type="radio" name="cat-mission" value="mass-gain">
-                <span class="cat-mission__control-label">Набор массы</span>
-              </label>
-              <label class="cat-mission__control">
-                <input class="cat-mission__control-input" type="radio" name="cat-mission" value="dont-know">
-                <span class="cat-mission__control-label">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </div>
-          </fieldset>
-        </div>
         <fieldset class="form__data contact-details">
           <legend class="contact-details__title">Контактные данные <br>(владельца кота)</legend>
           <div class="contact-details__container">

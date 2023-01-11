@@ -1,0 +1,21 @@
+@import "../../global/variables";
+
+.control-input {
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: (30 / 20);
+  color: @special_dark-grey;
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+
+  &--error {
+    border-color: @status_error;
+  }
+}
