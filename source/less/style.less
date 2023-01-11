@@ -1,25 +1,43 @@
 // common
-@import "global/index";
+@import "variables";
+@import "scaffolding";
+@import "grid";
 
 // blocks common
-@import "blocks/common/main";
+@import "blocks/common/button";
 @import "blocks/common/control-label";
 @import "blocks/common/control-input";
 @import "blocks/common/control-radio";
+@import "blocks/common/main";
+
+// home page
+@import "blocks/home/promo";
+@import "blocks/home/program";
+@import "blocks/home/advantages";
+
+// catalog page
+@import "blocks/catalog/show-more";
 
 // form page
 @import "blocks/form/program-form";
 @import "blocks/form/program-info";
 @import "blocks/form/program-choose";
 
+
+
+
+
+
+
+
+
+
+
+// Перебрать
 @import "header/main-nav";
 @import "header/main-header";
 @import "header/inner-nav";
-@import "promo";
-@import "program";
-@import "advantages";
-@import "show-more";
-@import "inner-main";
+
 @import "form/form-page";
 @import "form/form";
 @import "form/cat-data";
@@ -39,6 +57,8 @@
 @import "footer/social";
 @import "footer/copyright";
 
+
+// унести в typography и подключить сразу после переменных
 @font-face {
   font-family: "Lato";
   font-style: normal;
@@ -63,6 +83,8 @@
   font-display: swap;
 }
 
+// все общие стили по тегам унести в scaffolding
+// https://up.htmlacademy.ru/adaptive/27/criteries#b13
 html {
   height: 100%;
 }
@@ -90,6 +112,7 @@ main {
   box-sizing: border-box;
 }
 
+// можно унести в blocks/common/visually-hidden.less
 .visually-hidden {
   position: absolute;
   width: 1px;
